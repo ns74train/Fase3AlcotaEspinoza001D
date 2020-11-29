@@ -1,0 +1,207 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+    {% load static %}
+    
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+    
+
+    <!-- Bootstrap core CSS -->
+  
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+
+    <style>
+      .bd-placeholder-img {
+       font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      
+    body{  
+    background: -webkit-linear-gradient(to right, rgb(248, 248, 248), #9c8f8f);
+    background: linear-gradient(to right, #f5f5f5, #a8a8a8);
+    background-image: url(../static/fondo2.jpg);
+    }  
+    
+    
+    </style>
+
+    <!-- estilos -->
+    <link href="{% static 'carousel.css'%}" rel="stylesheet">
+  </head>
+ 
+  <body>
+  
+
+  <main role="main">
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'imgc1/liber.png'%}" width="100%" height="100%" focusable="false">
+        <div class="container">
+          <div class="carousel-caption text-left">
+            <h1>Libertadores</h1>
+            <p>Disfruta de un momento emocionante junto a tu equipo favorito </p>
+            
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'imgc1/estadio.jpg'%}" width="100%" height="100%" >
+        <div class="container">
+          <div class="carousel-caption text-anchor">
+            <h1>Sentiras la pasion por dentro</h1>   
+            <p><a class="btn btn-lg btn-primary" href="https://www.copalibertadores.com/es" target="_blank" role="button">Leer Mas</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'imgc1/copa.jpg'%}" width="100%" height="100%">
+        <div class="container">
+          <div class="carousel-caption text-left">
+            <h1>No cualquiera puede tocarla</h1>
+            <p>Equipos que tuvieron el Honor </p>
+            <p><a class="btn btn-lg btn-primary" href="{% url 'galeria' %}" role="button">Ver Galeria</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Siguiente</span>
+    </a>
+  </div>
+
+  <div class="container marketing">
+    
+      <h1>Goleadores Historicos</h1>
+      <br>
+
+    <!-- 3 columnas con sus respectivo texto -->
+    <div class="row">
+      <div class="col-lg-4">
+       <br>
+        <img src="{% static 'img/alberto.jpg'%}" alt="" svg class="bd-placeholder-img rounded-circle" width="140" height="140" >
+        <br>
+        <br>
+        <h2>Alberto Spencer</h2>
+        
+        <p>Alberto Spencer Herrera fue uno de los jugadores más importantes de la historia de nuestro club Peñarol. Goleador letal y apodado como “Cabeza Mágica”, 
+          nació el 6 de diciembre de 1937 en Ecuador donde se crió y comenzó a formarse como futbolista.Alberto Spencer es el máximo goleador en la historia de la Copa Libertadores con 54 tantos, 
+          48 de ellos con Peñarol</p>
+
+        <p><a class="btn btn-secondary" href="http://www.padreydecano.com/cms/idolos/alberto-spencer/" target="_blank" role="button">Información &raquo;</a></p>
+      </div>
+      <div class="col-lg-4">
+        <br>
+        <img src="{% static 'img/Fernando.jpg'%}" alt="" svg class="bd-placeholder-img rounded-circle" width="140" height="140" >
+        <br>
+        <br>
+
+        <h2>Fernando Morena</h2>
+        <p>Nacio en Montevideo, 2 de febrero de 1952 es un exfutbolista y director técnico uruguayo. Se consagró como unos de los máximos ídolos de Peñarol y del fútbol uruguayo.
+          Morena fue un delantero, que poseía una intuición para generarse espacios y perfilarse de cara al gol para definir con gran precisión. 
+          Fue uno de los más destacados delanteros sudamericanos de los años 70 y hasta la actualidad es el 2º máximo goleador histórico de la Copa Libertadores con 37 goles​ .</p>
+        <p><a class="btn btn-secondary" href="http://www.ciberche.net/histoche/jugador?player=248" target="_blank" role="button">Información &raquo;</a></p>
+      </div>
+
+      <div class="col-lg-4">
+        <br>
+        <img src="{% static 'img/Daniel.jpg'%}" alt="" svg class="bd-placeholder-img rounded-circle" width="140" height="140" >
+        <br>
+        <br>
+
+        <h2>Daniel Onega</h2>
+        <p>Nacio el 17 de marzo de 1945 es un exfutbolista argentino espcialmente de equipo River Plate apodado el "Fantasma". Se convirtió en el máximo goleador en la Copa Libertadores 1966 con 17 tantos, estableciendo el récord de más goles anotados en una sola edición del torneo, un récord que no ha sido superado.​</p>
+        <p><a class="btn btn-secondary" href="https://www.efe.com/efe/america/deportes/el-fantasma-daniel-onega-anoto-17-goles-en-la-copa-libertadores-de-1966/20000010-4104678" target="_blank" role="button">Información &raquo;</a></p>
+      </div>
+    </div>
+
+
+    <!-- Informacion -->
+
+    <hr class="featurette-divider">
+    <h1>Equipos Historicos</h1>
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Club Atlético Independiente. <span class="text-muted">El Mayor Campeón.</span></h2>
+        <br>
+        <p class="lead">Es una entidad deportiva de Argentina de la ciudad bonaerense de Avellaneda, situado en el sur del Gran Buenos Aires. 
+          Fue fundado el 1 de enero de 1905 por unos jóvenes empleados independistas del Club Maipú. El fútbol masculino es su disciplina más destacada, 
+          cuyo primer equipo participa en la Primera División de Argentina.</p>
+          <br>
+          <p><a class="btn btn-lg btn-primary" href="http://clubaindependiente.com/institucion/historia" target="_blank" role="button">Leer Mas</a></p>
+      </div>
+      <div class="col-md-5">
+        <img src="{% static 'imgc1/independiente.png'%}" svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" >
+        
+      </div>
+      
+    </div>
+
+    <hr class="featurette-divider">
+    
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Nacional de Uruguay. <span class="text-muted">Club con mas participacion en la Copa Libertadores</span></h2>
+        <br>
+        <p class="lead">El 14 de mayo de 1899 en la casa del Dr. Ernesto Caprario, 
+          al lado del hoy Teatro Verdi, socios, jugadores y dirigentes de los clubes Uruguay Athletic Club con sede en la Unión y Montevideo Football Club los fusionan para crear el Club Nacional de Football, 
+          primer equipo criollo de América Latina.</p>
+          <br>
+          <p><a class="btn btn-lg btn-primary" href="https://www.nacional.uy/historia.html" target="_blank" role="button">Leer Mas</a></p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img src="{% static 'imgc1/nacional.png'%}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500">
+      </div>
+      
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Club Boca juniors. <span class="text-muted">El equipo con las finales</span></h2>
+        <br>
+        <p class="lead">El Club Atlético Boca Juniors fue fundado el 3 de abril de 1905 por cinco inmigrantes italianos que vivían en el barrio de La Boca. Sin siquiera imaginarlo, 
+          estos cinco jóvenes escribieron los primeros párrafos de la historia del club más popular de la Argentina.
+          Es uno de equipos que mas finales a tenido en la trayectoria de la Copa Libertadores con un total de 11 finales .</p>
+          <br>
+          <p><a class="btn btn-lg btn-primary" href="https://www.bocajuniors.com.ar/el-club/historia" target="_blank" role="button">Leer Mas</a></p>
+      </div>
+      <div class="col-md-5">
+        <img src="{% static 'imgc1/boca2.png'%}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" >
+      </div>
+    </div>
+
+    <hr>
+
+ 
+
+  </div>
+   
+  </body>
+
+{% endblock %}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/'">
+    {% block title %}<title>Copa Libertadores</title>{% endblock %}
+    
+    {% load static %}
+
+    
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    
+    
+<body>
+  
+
+
+    <header>
+       
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark ">
+
+          <!-- logo -->
+          <a class="navbar-brand" href="#">
+            <img src="{% static 'img/foto.jfif'%}" width="50" height="50" alt="">
+          </a>
+      
+          <a class="navbar-brand" href="{% url 'index'%}">Inicio</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item ">
+                <a class="nav-link" href="{% url 'galeria'%}">Galeria <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="{% url 'usuario_create'%}">Registrarse <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="{% url 'comentario_create'%}">Comentario <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="{% url 'login'%}">Iniciar sesion <span class="sr-only">(current)</span></a>
+              </li>
+              
+            </ul>
+            
+          </div>
+        </nav>
+      
+        {% block content %}{% endblock %}
+
+  </body>
+  
+  <footer class="container">
+    <p class="float-right"><a style="font-style: italic; color: black;font-size: 20px; "href="{% url 'index'%}">Volver al principio</a></p>
+    <p>&copy; 2020 Copa Liberadores, Inc. </p>
+  </footer>
+</main>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="{% static 'js/bootstrap.bundle.min.js'%}"></script>
+  </html>
+  
