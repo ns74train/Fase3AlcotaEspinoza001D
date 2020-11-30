@@ -38,9 +38,12 @@
     
         </table>
         <br><br>
+        {% if user.is_authenticated %}
         <div class="row">
             <input class="offset-lg-1 col-lg-1" type="submit" value="Enviar" >
+           
             <a href="{% url 'vistacomentario' %}"> <input style="font-size: 20px;"class="btn btn-secondary offset-lg-6"type="button" value="Mostrar Comentarios"></a>
+            {%endif %}
            </div>
            
     </form>

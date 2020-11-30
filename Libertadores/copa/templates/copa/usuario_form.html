@@ -18,7 +18,7 @@
 </script>
 {% block title %}
 
-<title>Formulario Registro</title>
+<title>Formulario Registro Jugador</title>
 
 {% endblock %}
 
@@ -29,7 +29,7 @@
     <br><br><br>
     <div class="container" style="font-size: 20px;background: -webkit-linear-gradient(to right, rgb(248, 248, 248), #a5a4a4);
     background: linear-gradient(to right, #f5f5f5, #c2c0c0);padding-left: 2%;padding-top: 2%;padding-bottom: 1%;  justify-content: center; align-items: center;">
-        <p style="font-size: 50px; text-align: center;"><strong> Formulario </strong></p>
+        <p style="font-size: 50px; text-align: center;"><strong> Formulario Jugador </strong></p>
     
     <form class="action=" method="post" >
         {%csrf_token%}
@@ -38,9 +38,19 @@
     
         </table>
         <br><br>
+        {% if user.is_authenticated %}
         <div class="row">
             <input class="offset-lg-1 col-lg-1" type="submit" value="Enviar" >
-            <a href="{% url 'vista' %}"> <input style="font-size: 20px;"class="btn btn-secondary offset-lg-6"type="button" value="Mostrar Usuarios"></a>
+
+            {%endif%}
+            
+            {%if user.is_authenticated %}
+            <a href="{% url 'vista' %}"> <input style="font-size: 20px;"class="btn btn-secondary offset-lg-6"type="button" value="Mostrar Jugadores"></a>
+            
+
+            {%endif%}
+
+        
            </div>
            
     </form>

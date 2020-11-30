@@ -23,7 +23,12 @@
     <p><strong>Primer Nombre: </strong> {{usuario.first_name}}</p>
     <p><strong>Segundo Nombre: </strong> {{usuario.last_name}}</p>
     <p><strong>Correo: </strong> {{usuario.correo}}</p>
+    <p><strong>Edad: </strong> {{usuario.edad}}</p>
+    <p><strong>Equipo: </strong> {{usuario.equipo}}</p>
     <p><strong>Direccion: </strong> {{usuario.Direccion}}</p>
+
+    <a href="{% url 'vista' %}"> <input style="font-size: 20px;"class="btn btn-secondary offset-md-10"type="button" value="Volver Atras"></a>
+    
     </div>
 </body>
 {% endblock %}

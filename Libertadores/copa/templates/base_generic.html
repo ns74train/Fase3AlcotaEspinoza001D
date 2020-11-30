@@ -42,17 +42,27 @@
                 <a class="nav-link" href="{% url 'galeria'%}">Galeria <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link" href="{% url 'usuario_create'%}">Registrarse <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{% url 'usuario_create'%}">Jugador <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item ">
                 <a class="nav-link" href="{% url 'comentario_create'%}">Comentario <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link" href="{% url 'login'%}">Iniciar sesion <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{% url 'signup'%}">Registrarse <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link" href="{% url 'logout' %}">Cerrar sesion<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{% url 'login'%}">Iniciar sesión <span class="sr-only">(current)</span></a>
               </li>
+              {% if user.is_authenticated %}
+              <li class="nav-item ">
+                <a class="nav-link" href="{% url 'logout' %}">Cerrar sesión<span class="sr-only">(current)</span></a>
+              </li>
+              
+              <li class="nav-item ">
+                <a class="btn btn-secondary offset-lg-1"style="font-size: 15px;"type="button"> {{user.username}}</a>
+                
+              </li>
+              {% endif %}
               
             </ul>
             

@@ -39,7 +39,7 @@ class UsuarioCreate(CreateView):
 
 class UsuarioUpdate(UpdateView):
     model= Usuario
-    fields= ['rut','first_name','last_name','correo','contraseña','recontraseña','Direccion']
+    fields= ['rut','first_name','last_name','edad','equipo','Direccion']
 
 class UsuarioDelete(DeleteView):
     model= Usuario
@@ -56,6 +56,7 @@ class ComentarioListView(generic.ListView):
 class ComentarioCreate(CreateView):
     model= Comentario
     fields= '__all__'
+    
 
 class ComentarioUpdate(UpdateView):
     model= Comentario

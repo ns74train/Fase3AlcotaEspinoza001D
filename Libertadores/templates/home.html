@@ -18,12 +18,14 @@
   
 {% if user.is_authenticated %}
 
-  <h3>Hola! {{ user.username }}</h3>
+
+  <h3 style="text-align: center; font-size: 50px;">Hola! {{ user.username }}</h3>
  
 {% else %}
 
-  <p>No has iniciado sesion</p>
-  <a href="{% url 'login' %}">Login</a>
+  <p style="text-align: center; font-size: 50px;">No has iniciado sesión</p>
+  <br>
+  <a href="{% url 'login' %}"> <input style="font-size: 20px;"class="btn btn-secondary offset-md-5"type="button" value="Inicia Sesión"></a>
 
 
 {% endif %}

@@ -13,18 +13,28 @@
     
     <div class="container" style="background: -webkit-linear-gradient(to right, rgb(248, 248, 248), #9c8f8f);
     background: linear-gradient(to right, #f5f5f5, #a8a8a8);padding-top: 2%;padding-bottom: 1%;padding-left: 2%;display: block; margin: auto;">
-    <h1 style="color: black;">Lista de Usuarios</h1>
+    <h1 style="color: black;">Lista de Comentarios</h1>
 
     {%if comentario_list %}
     <ul>
+
         {%for comentario in comentario_list %}
+        
+
         <li style=" color: black; font-size: 20px;"> 
             <a style=" color:firebrick;font-size: 30px;"href="{{ comentario.get_absolute_url}}">{{comentario.nombre}}</a> <br>{{comentario.descripcion}}
-            <a href="{% url 'comentario_update' comentario.rut1 %}"> <input class="btn btn-secondary offset-md-1"type="button" value="Editar"></a>
-            <a href="{% url 'comentario_delete' comentario.rut1 %}"> <input class="btn btn-secondary"type="button" value="Eliminar"></a>
-        </li>
-        {% endfor %}
 
+            {%if user.is_staff %}
+            <a href="{% url 'comentario_update' comentario.rut1 %}"> <input class="btn btn-secondary offset-md-1"type="button" value="Editar"></a>
+            
+            {% endif %}
+            <a href="{% url 'comentario_delete' comentario.rut1 %}"> <input class="btn btn-secondary"type="button" value="Eliminar"></a>
+
+        </li>
+        <a href="{% url 'comentario_create' %}"> <input style="font-size: 20px;"class="btn btn-secondary offset-md-10"type="button" value="Volver Atras"></a>
+
+        {% endfor %}
+        
 
     </ul>
     {% else %}

@@ -12,9 +12,8 @@ class Usuario(models.Model):
 	rut = models.CharField(max_length=8,primary_key=True, help_text='ingrese 8 Caracteres')
 	first_name = models.CharField(max_length=100)
 	last_name = models.CharField(max_length=100)
-	correo = models.CharField(max_length=100)
-	contraseña = models.CharField(max_length=100)
-	recontraseña = models.CharField(max_length=100)
+	edad = models.CharField(max_length=2)
+	equipo = models.CharField(max_length=100)
 	Direccion = models.CharField(max_length=100)
  
 	class Meta:
@@ -31,6 +30,7 @@ class Comentario(models.Model):
     rut1 = models.CharField(max_length=8,primary_key=True, help_text='ingrese 8 Caracteres')
     nombre = models.CharField(max_length=100)
     descripcion = models.TextField(max_length=500)
+	
 
 
     class Meta:
